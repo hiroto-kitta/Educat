@@ -55,56 +55,51 @@ $num = $randomQuestionNumber
         </div>
       </div>
 </header>
-  <div class="main">
-    <div class="index">
-        <ul>
-            <li>1.be動詞 一般動詞　</li>
-            <li>2.be動詞 一般動詞 3人称単数</li>
-            <li>3.be動詞 一般動詞 過去形</li>
-            <li>4.助動詞</li>
-        </ul>
+<div class="main">
+      <div class="index">
+      <ul>
+        <li>1.be動詞 一般動詞　</li>
+        <li>2.be動詞 一般動詞 3人称単数</li>
+        <li>3.be動詞 一般動詞 過去形</li>
+        <li>4.助動詞</li>
+      </ul>
         
-        <p>問題選択画面(このページ）</p>
+      <p>問題選択画面(このページ）</p>
 
     </div>
-<div class="main-right">
-  <div class="title">
-    <h1> Question</h1>
-</div>
+  <div class="main-right">
+    <div class="title">
+      <h1> Question</h1>
+    </div>
 
-<div class="que-right">
-    <div class="top-wrapper">
+    <div class="que-right">
+      <div class="top-wrapper">
         <!-- <h1>問題番号<?php echo $result[$num]['id']?></h1> -->
         <h1><?php echo $result[$num]['content']?></h1>
+      </div>
+      <div class=hidden-disp>
+        <input type="checkbox" id="disp">
+        <label  class="btn answer"for="disp">回答</label>
+        <div class="check">
+          <div class="check-right">
+            <h1><?php echo $result[$num]['answer']?></h1>
+          </div>
+          <div class="check-left">
+    <!-- <div class="btn-wrapper"> -->
+            <input type="radio" id="scale" name="scales" checked>
+            <label for="scale" class="aa correct">正解</label>
+    <!-- </div> -->
+    <!-- <div class="btn-wrapper"> -->
+            <input type="radio" id="scale" name="scales">
+            <label for="scale" class="aa miss">不正解</label>
+    <!-- </div> -->
+             <div class="btn-wrapper">
+              <a href="#" class="btn next">次の問題へ</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class=hidden-disp>
-    <input type="checkbox" id="disp">
-    <label  class="btn answer"for="disp">回答</label>
-      <div class="check">
-        <div class="check-right">
-          <h1><?php echo $result[$num]['answer']?></h1>
-       </div>
-        <div class="check-left">
-    <div class="btn-wrapper">
-      <input type="checkbox" id="scales" name="scales" checked>
-      <label for="scales" class="btn correct">正解</label>
-    </div>
-    <div class="btn-wrapper">
-      <input type="checkbox" id="scales" name="scales">
-      <label for="scales" class="btn miss">不正解</label>
-    </div>
-    <div class="btn-wrapper">
-      <a href="#" class="btn next">次の問題へ</a>
-    </div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<footer>
-<div class="footer-logo">
-        <img src="logo.png"height="40px">
-    </div>
-</footer>
+  </div>
 </div>
 </html>
